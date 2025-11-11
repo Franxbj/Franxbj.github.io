@@ -1,0 +1,110 @@
+
+.header  {
+    color: #252323;
+    text-align: center;
+}
+
+.nav-menu {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+
+.nav-menu li {
+    display: inline;
+    margin-right: 20px;
+ 
+}
+
+/* #personal_information {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: auto;
+}
+
+#job_application_section {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: auto;
+} */
+
+section {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: auto;
+}
+
+#personal_information {
+    background-color: #f0f5f5;
+    margin-bottom: 30px;
+}
+
+#job_application_section {
+    background-color: #f0f5f5;
+    margin-bottom: 30px;
+}
+
+#education_and_experience {
+    background-color: #f0f5f5;
+    margin-bottom: 30px;
+}
+
+#skills {
+    background-color: #f0f5f5;
+    margin-bottom: 30px;
+}
+#application_details {
+    background-color: #f0f5f5;
+    margin-bottom: 30px;
+}
+
+#system_information {
+    background-color: #f0f5f5;
+    margin-bottom: 30px;
+}
+
+#submit_section {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    align-items: center;
+}
+
+#inspirational_quote {
+    text-align: center;
+    margin-top: 20px;
+    color: #555555;
+}
+
+#join_us {
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+#join_us_title {
+    font-size: 28px;
+    color: #222222;
+    padding: 40px;
+    margin: auto;
+}
+#join_us_paragraph {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333333;
+    max-width: 800px;
+    margin: auto;
+}
+
+#join_us_image_container {
+    text-align: center;
+    margin-top: 20px;
+}
