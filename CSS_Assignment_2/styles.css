@@ -1,0 +1,432 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #333;
+  min-height: 100vh; /* Full viewport height */
+  position: relative;
+  /* So footer positions relative to body */
+  padding-bottom: 60px;
+  /* Space for footer so content doesn't hide under it */
+}
+
+/* latin - @font-face declatation */
+@font-face {
+  font-family: 'Coming Soon';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/comingsoon/v20/qWcuB6mzpYL7AJ2VfdQR1t-VWDk.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Navigation section */
+ul li a {
+  font-size: 24px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  color: #ffffff;
+  padding: 20px 0 10px 0;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+header .logo img {
+  width: 50px;
+  height: auto;
+}
+.nav-menu {
+  text-align: center;
+  list-style: none;
+  padding: 10px;
+}
+.nav-menu li {
+ display: inline; /* Navigation uses inline display */
+  margin-right: 15px;
+}
+
+/* Hero section - Large banner */
+.hero_section {
+  position: relative; /* Hero section uses relative positioning */
+  width: 100%;
+  height: 100%;
+}
+
+.hero_section img {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: rgba(0, 0, 0, 0.4);
+  /* Dark overlay for better text visibility */
+}
+
+.hero_section .main-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 48px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Th subtitle uses absolute positioning */
+.subtitle {
+  position: absolute;
+  bottom: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Floating Sidebar */
+.sidebar {
+  float: left;
+  width: 300px;
+  margin: 90px 0 20px 20px;
+  /* Space around it */
+  padding: 10px;
+  background-color: #fdf3f3;
+  border: 2px solid #333;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.float-title {
+  word-spacing: 15px;
+}
+.clear-float {
+  clear: both;
+}
+
+/* Buy ticket button */
+input[type="button"] {
+  background-color: #f5166c;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="button"]:hover {
+  background-color: #c40f52;
+}
+/* Gallery Section */
+.gallery_grid {
+  overflow: auto; /* Make space for sidebar */
+  min-height: 600px;
+  margin-top: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.gallery_text {
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: #64c0fd;
+  padding: 10px;
+}
+.gallery_heading {
+  font-size: 48px;
+}
+
+.gallery {
+  display: inline-block; /* Gallery styling is inline-block */
+  width: 30%;
+  padding: 5px;
+  margin: 10px;
+  vertical-align: top;
+  border: #9e9e9e 1px solid;
+  border-radius: 9px;
+  position: relative;
+}
+
+img[src*="art"] {
+  border-radius: 9px;
+  width: 350px;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.gallery_title {
+  text-align: center;
+  color: rgb(23, 23, 23);
+  font-size: 24px;
+}
+
+/* This price tage uses absolute positioning */
+.price {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  background-color: #7a16f5;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* The artist frame uses relative positioning */
+.artist {
+  display: inline-block;
+  position: relative;
+  background-color: #0a0a0c;
+  color: white;
+  border-radius: 10px;
+  width: 100%;
+  padding: 50px;
+}
+
+.artist_title {
+  text-align: center;
+  padding: 20px;
+  font-size: 48px;
+}
+
+img[src*="bruce"] {
+  float: left; /* Artist image is floated to the left*/
+  margin-left: 100px;
+  border-radius: 90px 20px;
+  width: 350px;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+}
+
+img[src*="ribbon"] {
+  position: absolute;
+  top: 120px;
+  left: 450px;
+  width: 70px;
+  height: auto;
+}
+
+.artist_bio_container {
+  overflow: auto;
+  padding: 0 50px;
+}
+
+.artist_name {
+  font-size: 30px;
+  padding-bottom: 30px;
+}
+
+.artist_bio {
+  line-height: 1.8rem;
+  padding: 20px 0 20px 0;
+  font-size: 20px;
+}
+
+blockquote {
+  color: rgb(0, 255, 242);
+  padding: 20px 0 40px 0;
+}
+
+#mainSubmit {
+  background-color: #7a16f5;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* Testimonial Section */
+.testimonials {
+  background-color: #ffffff;
+  padding: 50px;
+  width: 100%;
+  text-align: center;
+  overflow: auto;
+}
+
+.testimonial_container {
+  background-color: #f8f3f5;
+  margin: 50px 400px;
+  border: #0280d4 2px solid;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Review section */
+.line {
+  height: 0;
+  border-top: 2px solid #b6c8ff;
+  margin: 1rem 0;
+}
+
+.review-img {
+  width: 200px;
+}
+
+.review {
+  font-family: 'Coming Soon', cursive; /* Used @Font-face here */
+  text-align: center;
+  line-height: 2em;
+  padding-bottom: 20px;
+}
+
+.reviewer-container {
+  display: inline-block;
+  text-align: left;
+}
+.reviewer-img {
+  float: left;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.reviewer-info {
+  overflow: hidden;
+}
+
+/* Footer section - The footer uses absolute positioning */
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  clear: both;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  background-color: #f1f1f1;
+  color: #181818;
+}
+
+.contact-hero {
+  margin-top: 140px; /* Push content below fixed header */
+  padding: 40px 20px;
+  text-align: center;
+  color: black;
+  background-color: #ffffff;
+}
+
+.get-in-touch-title{
+  font-family: "Playwrite US Trad Guides",
+    cursive;
+    font-weight: 400;
+    font-style: italic;;
+}
+
+/* Form is floated to the left */
+.form-section {
+  float: left;
+  border: #b4b7b8 2px solid;
+  border-radius: 10px;
+  width: 50%;
+  margin: 20px 40px 40px 20px;
+  padding: 20px;
+  height: 500px;
+}
+
+.gallery-info {
+  overflow: auto;
+  border: #b4b7b8 2px solid;
+  border-radius: 10px;
+  margin: 20px 40px 40px 20px;
+  padding: 20px;
+  height: 500px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0 16px 0;
+  /* margin shorthand */
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+/* Targets the submit button */
+input[type="submit"] {
+  background-color: hsl(337, 92%, 52%);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  position: static; /* Submit button uses Static positioning*/
+}
+
+#aboutus {
+  text-align: center;
+  background-color: hsla(0, 0%, 20%, 0.9);
+  /* dark gray, 70% opaque */
+  color: rgb(255, 255, 255);
+  padding: 70px;
+}
+
+.title-aboutus {
+  padding: 20px;
+}
+.upcoming {
+  position: relative;
+  text-align: center;
+  margin: 50px;
+}
+
+.exhibition-title {
+  padding: 20px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+table {
+  margin: 0 auto;
+  width: 50%;
+  border-collapse: collapse;
+}
+
+/* Table head uses sticky positioning */
+thead {
+  position: sticky;
+  top: 0;
+  background-color: #3c3c3c;
+  color: white;
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+/* The back to top button feature uses fixed positioning with a large z-index so it stays on top of all elements.*/
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: hsla(337, 92%, 52%);
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
